@@ -1,4 +1,6 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <div class="products-user-wrapper">
   <div class="products-header">
@@ -10,16 +12,17 @@
     <% cache @products do %>
       <% @products.each do |product| %>
         <% cache product do %>
-          <%= link_to product do %>
-            <div class="product-item">
+          <div class="product-item">
+            <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+            <img src="<%= product.image_url %>" width="384" alt="music">
 
-              <img src="<%= product.image_url %>" width="384" alt="music">
+            <%= link_to product do %>
               <div class="content">
                 <h4 class="title"><%= product.title %></h4>
                 <p class="price"><%= number_to_currency(product.price) %></p>
               </div>
-            </div>
-          <% end %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
     <% end %>

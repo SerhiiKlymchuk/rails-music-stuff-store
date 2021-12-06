@@ -1,4 +1,7 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <div class="product-controls">
   <%= link_to 'Edit', edit_product_path(@product) %> |
   <%= link_to "Delete", @product, method: :delete, data: { confirm: "Really?" } %> |

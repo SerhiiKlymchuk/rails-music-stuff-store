@@ -50,15 +50,44 @@
     max-width: 390px;
     display: flex;
     flex-direction: column;
-    transition: opacity .2s linear;
+    position: relative;
+
+    .button_to{
+      position: absolute;
+
+      left: 50%;
+      top: 175px;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+
+      input{
+        padding: 15px 35px;
+        border-radius: 20px;
+        font-size: 14px;
+        background-color: #ffffff;
+        box-shadow: 0 0 9px 0 #333333;
+        border: none;
+        cursor: pointer;
+      }
+    }
 
     &:hover{
-      opacity: .9;
+      img{
+        opacity: .6;
+        cursor: auto;
+      }
+
+      .button_to{
+        opacity: 1;
+        z-index: 1;
+      }
     }
     img {
       display: block;
       width: 390px;
       height: 350px;
+      opacity: 1;
+      transition: opacity .2s linear;
     }
 
     .content {
