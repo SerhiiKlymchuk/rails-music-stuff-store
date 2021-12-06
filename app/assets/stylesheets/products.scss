@@ -1,0 +1,180 @@
+// Place all the styles related to the Products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+/* === LISTINGS ===*/
+.products-wrapper {
+  width: 100%;
+  min-height: 100vh;
+
+  .products-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    button {
+      border-radius: 20px;
+      background: #849af1;
+      padding: 10px 20px;
+      font-size: 16px;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      transition: .2s linear;
+
+      a {
+        color: #ffffff !important;
+      }
+
+      &:hover {
+        background: #5679fd;
+      }
+    }
+  }
+
+  .products-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+    margin-top: 50px;
+
+    &:after {
+      content: '';
+      flex: 1 1;
+    }
+
+    a {
+      height: 100%;
+    }
+  }
+
+  .product-item {
+    width: 100%;
+    max-width: 385px;
+    height: 425px;
+
+    display: flex;
+    flex-direction: column;
+    transition: opacity .2s linear;
+
+    &:hover {
+      opacity: .8;
+    }
+
+
+    img {
+      display: block;
+      width: 100%;
+      min-width: 360px;
+      height: 300px;
+      min-height: 300px;
+    }
+
+    .content {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title {
+      color: #000000;
+      text-decoration: none;
+      font: 400 18px sans-serif;
+    }
+
+    .price {
+      margin-top: auto;
+      font: 500 16px sans-serif;
+    }
+
+  }
+}
+/* === END LISTINGS ===*/
+
+/* === PRODUCT FORM ===*/
+.product-full-wrapper{
+  display: flex;
+  gap: 50px;
+
+  .left{
+    display: flex;
+    flex-direction: column;
+
+    img{
+      width: 450px;
+      height: 400px;
+    }
+
+    button{
+      width: 100%;
+      background: #658665;
+      color: #fafafa;
+      font-size: 16px;
+      padding: 10px 15px;
+
+      &:hover{
+        opacity: .9;
+      }
+    }
+
+    .price{
+      font-size: 26px;
+      text-align: center;
+      color: #658665;
+    }
+  }
+
+  .content{
+    .title{
+      font-size: 36px;
+      line-height: 1;
+    }
+
+    .description{
+      font-size: 16px;
+    }
+  }
+}
+/* === END SHOW PRODUCT ===*/
+
+/* ===  PRODUCT FORM ===*/
+.product-form-wrapper{
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+
+  .field{
+    width: 100%;
+  }
+
+  input{
+    width: 100%;
+    padding: 10px 5px;
+    border: 1px solid #e3e3e3;
+    text-overflow: ellipsis;
+  }
+
+  textarea{
+    width: 100%;
+    height: 150px;
+  }
+
+  .actions input{
+    border-radius: 20px;
+    background: #879ef6;
+    color: #fafafa;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+
+    &:hover{
+      opacity: .9;
+    }
+  }
+}
+/* === END PRODUCT FORM ===*/

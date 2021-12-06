@@ -1,0 +1,75 @@
+
+
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+    background: #f8f9fa !important;
+    font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background: transparent;
+    color: inherit;
+}
+
+button{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header {
+    background: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    padding: 5px 0;
+}
+
+.header-wrap {
+    max-width: 1340px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 29px;
+    font-family: 'Pacifico', cursive;
+    color: #333333;
+}
+
+main{
+    width: 100%;
+    max-width: 1280px;
+    margin: 50px auto;
+    padding: 20px 35px;
+    background: #ffffff;
+    box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.main-image{
+    position: absolute;
+    opacity: .9;
+    z-index: -1;
+}

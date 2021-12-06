@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="products-wrapper">
+
+  <div class="products-header">
+    <h3>Products </h3>
+    <button><%= link_to '+ Add Product', new_product_path %></button>
+  </div>
+  <hr>
+
+  <div class="products-items">
+    <% @products.each do |product| %>
+      <%= link_to product do %>
+        <div class="product-item">
+
+          <img src="<%= product.image_url %>" width="384" alt="music">
+          <div class="content">
+            <h4 class="title"><%= product.title %></h4>
+            <p class="price">$<%= product.price %></p>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
+  </div>
+</div>
+<br>
+
+

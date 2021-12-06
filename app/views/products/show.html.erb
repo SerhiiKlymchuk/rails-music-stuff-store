@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+<div class="product-controls">
+  <%= link_to 'Edit', edit_product_path(@product) %> |
+  <%= link_to 'Back', products_path %>
+</div>
+<hr>
+<div class="product-full-wrapper">
+  <div class="left">
+    <img src="<%= @product.image_url %>" alt="">
+    <button>Buy</button>
+    <p class="price"><%= @product.price %>$</p>
+  </div>
+
+  <div class="content">
+    <h2 class="title"> <%= @product.title %></h2>
+    <p class="description"> <%= raw @product.description %></p>
+  </div>
+</div>
+

@@ -1,0 +1,9 @@
+<div class="product-controls">
+  <h1>Editing Product</h1>
+  <%= link_to 'Show', @product %> |
+  <%= link_to 'Back', products_path %>
+</div>
+<hr>
+
+<%= render 'form', product: @product %>
+

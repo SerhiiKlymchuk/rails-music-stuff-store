@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicStuff</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-wrap">
+        <h2 class="header__title">Music Stuff</h2>
+        <div class="header-info">15$</div>
+      </div>
+    </header>
+    <img class="main-image" src="https://www.musicwebdesigner.com/wp-content/uploads/2015/10/banner13.jpg" alt="banner">
+    <main>
+      <%= yield %>
+    </main>
+  </body>
+</html>
