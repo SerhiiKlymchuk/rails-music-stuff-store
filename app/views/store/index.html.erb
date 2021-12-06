@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<div class="products-user-wrapper">
+  <div class="products-header">
+    <h3>Our stuff </h3>
+  </div>
+  <hr>
+
+  <div class="products-items">
+    <% cache @products do %>
+      <% @products.each do |product| %>
+        <% cache product do %>
+          <%= link_to product do %>
+            <div class="product-item">
+
+              <img src="<%= product.image_url %>" width="384" alt="music">
+              <div class="content">
+                <h4 class="title"><%= product.title %></h4>
+                <p class="price"><%= number_to_currency(product.price) %></p>
+              </div>
+            </div>
+          <% end %>
+        <% end %>
+      <% end %>
+    <% end %>
+  </div>
+</div>

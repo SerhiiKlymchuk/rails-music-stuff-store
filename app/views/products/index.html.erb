@@ -1,7 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<div class="products-wrapper">
-
+<div class="products-admin-wrapper">
   <div class="products-header">
     <h3>Products </h3>
     <button><%= link_to '+ Add Product', new_product_path %></button>
@@ -10,18 +9,20 @@
 
   <div class="products-items">
     <% @products.each do |product| %>
-      <%= link_to product do %>
-        <div class="product-item">
-
-          <img src="<%= product.image_url %>" width="384" alt="music">
-          <div class="content">
-            <h4 class="title"><%= product.title %></h4>
-            <p class="price">$<%= product.price %></p>
-          </div>
+      <div class="product-item">
+        <img src="<%= product.image_url %>" width="384" alt="music">
+        <div class="content">
+          <h4 class="title"><%= product.title %></h4>
+          <p class="description"><%= truncate(product.description, :length => 230, :omission => "..." , :escape => true) %></p>
+          <p class="price">$<%= product.price %></p>
         </div>
-      <% end %>
+        <div class="controls">
+          <%= link_to 'Show', product %>
+          <%= link_to 'Edit', edit_product_path(product) %>
+          <%= link_to "Delete", product, method: :delete, data: { confirm: "Really?" } %>
+        </div>
+      </div>
     <% end %>
-
   </div>
 </div>
 <br>
