@@ -1,0 +1,23 @@
+<div>
+  <h4>Dear, <%= @order.name %>!</h4>
+  <p>
+    Thank you for your recent order from The MusicStuff Store.
+    You ordered the following items:
+  </p>
+  <br>
+
+  <table>
+    <thead>
+      <tr>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <%= render @order.line_items -%>
+    </tbody>
+  </table>
+
+  <br><br>
+
+  <b>We'll send you a separate email when your order ships!.</b>
+</div>

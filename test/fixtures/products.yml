@@ -3,13 +3,13 @@
 one:
   title: MyString
   description: MyText
-  image_url: lorem.jpg
+  image_url: https://www.rollingstone.com/wp-content/uploads/2018/06/01-114-d31474ea-a1db-41e3-9e4c-8371729a959b.jpg
   price: 9.99
 
 two:
   title: MyString
   description: MyText
-  image_url: lorem.jpg
+  image_url: https://www.rollingstone.com/wp-content/uploads/2018/06/01-114-d31474ea-a1db-41e3-9e4c-8371729a959b.jpg
   price: 9.99
 
 ruby:
@@ -19,4 +19,4 @@ ruby:
     language out there. If you need to get working programs
     delivered fast, you should add Ruby to your toolbox.
   price: 49.50
-  image_url: ruby.jpg
+  image_url: https://www.rollingstone.com/wp-content/uploads/2018/06/01-114-d31474ea-a1db-41e3-9e4c-8371729a959b.jpg
