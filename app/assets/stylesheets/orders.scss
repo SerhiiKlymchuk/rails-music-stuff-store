@@ -1,0 +1,52 @@
+// Place all the styles related to the Orders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.order_form{
+  max-width: 450px;
+  margin: 0 auto;
+
+  input{
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid #e3e3e3;
+    text-overflow: ellipsis;
+  }
+
+  .field_with_errors{
+    &:last-of-type{
+      width: 100%;
+      input{
+        width: 99.5%;
+        padding: 10px 0;
+      }
+
+      textarea{
+        width: 99.1%;
+        padding: 10px 0;
+      }
+    }
+  }
+
+  textarea{
+    width: 100%;
+    height: 50px;
+    padding: 0;
+  }
+
+  select{
+    width: 100%;
+    background: #e3e3e3;
+    border: none;
+    color: #333333;
+    padding: 10px 0;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    border-radius: 20px;
+    background: #adbaf5;
+    color: #333333;
+  }
+
+}

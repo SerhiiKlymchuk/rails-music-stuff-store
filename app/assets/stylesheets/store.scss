@@ -34,9 +34,9 @@
   .products-items {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 50px;
+    gap: 68px;
     margin-top: 50px;
 
     &:after{
@@ -85,6 +85,7 @@
     img {
       display: block;
       width: 390px;
+      min-width: 390px;
       height: 350px;
       opacity: 1;
       transition: opacity .2s linear;

@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel='icon' type='png' href='https://www.clipartmax.com/png/middle/3-31605_size-guitar-icon-png.png' />
+
+
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -21,14 +24,27 @@
     </a>
 
     <div class="header-info">
-      <a href="/carts/<%=session[:cart_id]%>">&#x1F6D2;</a>
+      <!--      <a href="/carts/<%#= session[:cart_id] %>">&#x1F6D2;</a>-->
     </div>
 
   </div>
 </header>
 <img class="main-image" src="https://www.musicwebdesigner.com/wp-content/uploads/2015/10/banner13.jpg" alt="banner">
-<main>
-  <%= yield %>
-</main>
+<div class="body-wrapper">
+    <aside>
+      <div id="cart" class="carts">
+          <%= render_if @cart && @cart.line_items.any?, @cart %>
+      </div>
+      <nav class="menu-nav">
+        <h3>Menu</h3>
+        <hr>
+        <li><a href="/">Home</a></li>
+        <li><a href="/products">Admin products</a></li>
+      </nav>
+    </aside>
+  <main>
+    <%= yield %>
+  </main>
+</div>
 </body>
 </html>
