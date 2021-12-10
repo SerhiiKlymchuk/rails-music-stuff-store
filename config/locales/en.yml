@@ -1,33 +1,63 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# The following keys must be escaped otherwise they will not be retrieved by
-# the default I18n backend:
-#
-# true, false, on, off, yes, no
-#
-# Instead, surround them with single quotes.
-#
-# en:
-#   'true': 'foo'
-#
-# To learn more, please read the Rails Internationalization guide
-# available at https://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "Music Stuff"
+      menu: 'Menu'
+      home: "Home"
+      login: "Login"
+      logout: "Logout"
+      orders: "Orders"
+      products: "Products"
+      users: "Users"
+  store:
+    index:
+      store_title: "Our stuff"
+      add: "Add to Cart"
+  carts:
+    cart:
+      title: "Your Cart"
+      total: "Total"
+      empty: "Empty cart"
+      empty_confirm: "Are you sure you want to empty your cart?"
+      checkout: "Checkout"
+  number:
+    currency:
+      format:
+        unit: "$"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+  orders:
+    form:
+      name: "Name"
+      address_html: "Address"
+      email: "E-mail"
+      pay_type: "Pay type"
+      submit: "Purchase an Order"
+      pay_title: "Please Enter Your Payment Details"
+      pay_types:
+        default: "Select a payment method"
+        check: "Check"
+        credit: "Credit card"
+        purchase: "Purchase order"
+      check_pay_type:
+        routing_number: "Routing #"
+        account_number: "Account #"
+      credit_card_pay_type:
+        cc_number: "CC #"
+        expiration_date: "Expiry"
+      purchase_order_pay_type:
+        po_number: "PO #"
+  errors:
+    template:
+      body: "There were problems with the following fields:"
+      header:
+        one: "1 error prohibited this %{model} from being saved"
+        other: "%{count} errors prohibited this %{model} from being saved"
+  activerecord:
+    errors:
+      messages:
+        inclusion: "not listed"
+        blank: "cannot be empty"
+  thanks: "Thank you for your order"

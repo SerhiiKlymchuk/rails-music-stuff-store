@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel='icon' type='png' href='https://www.clipartmax.com/png/middle/3-31605_size-guitar-icon-png.png' />
+  <link rel='icon' type='png' href='https://www.clipartmax.com/png/middle/3-31605_size-guitar-icon-png.png'/>
 
 
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -14,34 +14,58 @@
 
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
   <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <script type="text/javascript">
+      I18n.defaultLocale = "<%= I18n.default_locale %>";
+      I18n.locale = "<%= I18n.locale %>";
+  </script>
+  <%= javascript_pack_tag 'locale_switcher', 'data-turbolinks-track': 'reload' %>
 </head>
 
 <body>
 <header class="header">
   <div class="header-wrap">
     <a href="/">
-      <h2 class="header__title">Music Stuff</h2>
+      <h2 class="header__title"><%= t('.title') %></h2>
     </a>
 
     <div class="header-info">
       <!--      <a href="/carts/<%#= session[:cart_id] %>">&#x1F6D2;</a>-->
+      <%= form_tag store_index_path, class: 'locale' do %>
+        <%= select_tag 'set_locale',
+                       options_for_select(LANGUAGES, I18n.locale.to_s),
+                       onchange: 'this.form.submit()' %>
+        <%= submit_tag 'submit', id: "submit_locale_change" %>
+      <% end %>
+
+      <% if session[:user_id] %>
+        <%= button_to t('.logout'), logout_path, method: :delete %>
+      <% else %>
+        <%= button_to t('.login'), login_path, method: :get, class: 'button-login' %>
+      <% end %>
     </div>
 
   </div>
 </header>
 <img class="main-image" src="https://www.musicwebdesigner.com/wp-content/uploads/2015/10/banner13.jpg" alt="banner">
 <div class="body-wrapper">
-    <aside>
-      <div id="cart" class="carts">
-          <%= render_if @cart && @cart.line_items.any?, @cart %>
-      </div>
-      <nav class="menu-nav">
-        <h3>Menu</h3>
-        <hr>
-        <li><a href="/">Home</a></li>
-        <li><a href="/products">Admin products</a></li>
-      </nav>
-    </aside>
+  <aside>
+    <div id="cart" class="carts">
+      <%= render_if @cart && @cart.line_items.any?, @cart %>
+    </div>
+
+    <nav class="menu-nav">
+      <h3><%= t('.menu') %></h3>
+      <hr>
+
+      <% if session[:user_id] %>
+        <li><%= link_to t('.orders'), orders_path %></li>
+        <li><%= link_to t('.products'), products_path %></li>
+        <li><%= link_to t('.users'), users_path %></li>
+      <% else %>
+        <li><a href="/"><%= t('.home') %></a></li>
+      <% end %>
+    </nav>
+  </aside>
   <main>
     <%= yield %>
   </main>

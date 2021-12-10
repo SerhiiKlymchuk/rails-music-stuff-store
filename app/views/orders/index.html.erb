@@ -1,6 +1,10 @@
-<p id="notice"><%= notice %></p>
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
 
 <h1>Orders</h1>
+<%= link_to 'New Order', new_order_path , class: 'button'%>
+<br><br>
 
 <table>
   <thead>
@@ -30,4 +34,4 @@
 
 <br>
 
-<%= link_to 'New Order', new_order_path %>
+

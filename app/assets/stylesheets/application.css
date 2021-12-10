@@ -30,7 +30,7 @@ a:hover {
     color: inherit;
 }
 
-button {
+button , .button{
     padding: 5px 10px;
     border: none;
     outline: none;
@@ -60,6 +60,28 @@ button {
 .header-info {
     font-size: 24px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-info input[type="submit"]{
+    background: indianred;
+    color: #fafafa;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.header-info select{
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
+
+.header-info .button-login {
+    background: #849af1 !important;
 }
 
 .body-wrapper {
@@ -80,9 +102,11 @@ main {
 .carts {
     width: 300px;
 }
-.carts table{
+
+.carts table {
     width: 100%;
 }
+
 .menu-nav {
     font-size: 14px;
     list-style: none;
@@ -94,11 +118,11 @@ main {
     margin-bottom: 5px;
 }
 
-.menu-nav li{
+.menu-nav li {
     margin-top: 5px;
 }
 
-.menu-nav a:hover{
+.menu-nav a:hover {
     text-decoration: underline;
 }
 
@@ -118,4 +142,51 @@ main {
     margin-bottom: 1em;
     padding: 1em 1.414em;
     text-align: center;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid #e3e3e3;
+    text-overflow: ellipsis;
+}
+
+.form .field_with_errors input {
+    width: 99.5%;
+    padding: 10px 0;
+}
+
+.form .field_with_errors:last-of-type {
+    width: 100%;
+}
+
+.form .field_with_errors textarea {
+    width: 99.1%;
+    padding: 10px 0;
+}
+
+.form textarea {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+}
+
+.form select {
+    width: 100%;
+    background: #e3e3e3;
+    border: none;
+    color: #333333;
+    padding: 10px 0;
+}
+
+.form input[type="submit"] {
+    cursor: pointer;
+    border-radius: 20px;
+    background: #adbaf5;
+    color: #333333;
 }

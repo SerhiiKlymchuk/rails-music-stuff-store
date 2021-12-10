@@ -4,7 +4,7 @@
 
 <div class="products-user-wrapper">
   <div class="products-header">
-    <h3>Our stuff </h3>
+    <h3><%= t('.store_title') %></h3>
   </div>
   <hr>
 
@@ -13,7 +13,7 @@
       <% @products.each do |product| %>
         <% cache product do %>
           <div class="product-item">
-            <%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true%>
+            <%= button_to t('.add'), line_items_path(product_id: product, locale: I18n.locale), remote: true%>
             <img src="<%= product.image_url %>" width="384" alt="music">
 
             <%= link_to product do %>

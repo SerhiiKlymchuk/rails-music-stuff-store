@@ -1,0 +1,64 @@
+pl:
+  layouts:
+    application:
+      title: "Muzyka"
+      menu: 'Karta'
+      home: "Dom"
+      login: "Zaloguj sie"
+      logout: "Wyloguj"
+      orders: "Zamówienia"
+      products: "Produkty"
+      users: "Użytkownicy"
+  store:
+    index:
+      store_title: "Nasze rzeczy"
+      add: "Dodaj do koszyka"
+  carts:
+    cart:
+      title: "Twój wózek"
+      total: "Całkowity"
+      empty: "Pusty wózek"
+      empty_confirm: "Czy na pewno chcesz opróżnić koszyk?"
+      checkout: "Sprawdzić"
+
+  number:
+    currency:
+      format:
+        unit: "zł"
+        precision: 2
+        separator: "."
+        delimiter: ","
+        format: "%u%n"
+  orders:
+    form:
+      name: "Nazwa"
+      address_html: "Adres"
+      email: "E-mail"
+      pay_type: "Rodzaj płatności"
+      submit: "Kup zamówienie"
+      pay_title: "Proszę wprowadź szczegóły swojej płatności"
+      pay_types:
+        default: "Wybierz metodę płatności"
+        check: "Sprawdzać"
+        credit: "Karta kredytowa"
+        purchase: "Zamówienie"
+      check_pay_type:
+        routing_number: "Rozgromienie #"
+        account_number: "Rachunek #"
+      credit_card_pay_type:
+        cc_number: "CC #"
+        expiration_date: "Wygaśnięcie"
+      purchase_order_pay_type:
+        po_number: "PO #"
+  activerecord:
+    errors:
+      messages:
+        inclusion: "brak na liście"
+        blank: "nie może być puste"
+  errors:
+    template:
+      body: "Występują problemy z następującymi polami:"
+      header:
+        one: "1 błąd zapobiegł temu %{model} trzymaj się"
+        other: "%{count} błędy temu zapobiegły %{model} trzymaj się"
+  thanks: "Dziękuję za Twoje zamówienie"

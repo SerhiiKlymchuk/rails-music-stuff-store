@@ -50,3 +50,22 @@
   }
 
 }
+
+.button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+
+  a {
+    color: #ffffff !important;
+  }
+
+  &:hover {
+    background: #5679fd;
+  }
+}
