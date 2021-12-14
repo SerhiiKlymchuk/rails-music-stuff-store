@@ -1,0 +1,22 @@
+/* line 5, app/assets/stylesheets/users.scss */
+.button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff !important;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+/* line 16, app/assets/stylesheets/users.scss */
+.button a {
+  color: #ffffff !important;
+}
+
+/* line 20, app/assets/stylesheets/users.scss */
+.button:hover {
+  background: #5679fd;
+}

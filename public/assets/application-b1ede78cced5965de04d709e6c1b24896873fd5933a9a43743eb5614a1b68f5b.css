@@ -1,0 +1,806 @@
+@charset "UTF-8";
+/* line 6, app/assets/stylesheets/carts.scss */
+.carts table {
+  border-collapse: collapse;
+}
+
+/* line 9, app/assets/stylesheets/carts.scss */
+.carts td {
+  padding: 0.5em;
+}
+
+/* line 12, app/assets/stylesheets/carts.scss */
+.carts td.quantity {
+  white-space: nowrap;
+}
+
+/* line 15, app/assets/stylesheets/carts.scss */
+.carts td.quantity::after {
+  content: " ×";
+}
+
+/* line 18, app/assets/stylesheets/carts.scss */
+.carts td.price {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* line 23, app/assets/stylesheets/carts.scss */
+.carts tfoot th, .carts tfoot th.price {
+  font-weight: bold;
+  padding-top: .5em;
+}
+
+/* line 27, app/assets/stylesheets/carts.scss */
+.carts tfoot th {
+  text-align: right;
+}
+
+/* line 30, app/assets/stylesheets/carts.scss */
+.carts tfoot th.price {
+  border-top: solid thin;
+}
+
+/* line 34, app/assets/stylesheets/carts.scss */
+.carts .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+/* line 39, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"] {
+  background: indianred;
+  color: #fafafa;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  border: none;
+}
+
+/* line 47, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"]:hover {
+  opacity: .9;
+}
+
+/* line 51, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"]:last-of-type {
+  background: #76bd76;
+}
+@keyframes line-item-highlight {
+  0% {
+    background: #b6ffb6;
+  }
+  100% {
+    background: none;
+  }
+}
+
+/* line 14, app/assets/stylesheets/line_items.scss */
+.line-item-highlight {
+  animation: line-item-highlight 1s;
+}
+/* line 5, app/assets/stylesheets/orders.scss */
+.order_form {
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* line 9, app/assets/stylesheets/orders.scss */
+.order_form input {
+  width: 100%;
+  padding: 10px 0px;
+  border: 1px solid #e3e3e3;
+  text-overflow: ellipsis;
+}
+
+/* line 17, app/assets/stylesheets/orders.scss */
+.order_form .field_with_errors:last-of-type {
+  width: 100%;
+}
+
+/* line 19, app/assets/stylesheets/orders.scss */
+.order_form .field_with_errors:last-of-type input {
+  width: 99.5%;
+  padding: 10px 0;
+}
+
+/* line 24, app/assets/stylesheets/orders.scss */
+.order_form .field_with_errors:last-of-type textarea {
+  width: 99.1%;
+  padding: 10px 0;
+}
+
+/* line 31, app/assets/stylesheets/orders.scss */
+.order_form textarea {
+  width: 100%;
+  height: 50px;
+  padding: 0;
+}
+
+/* line 37, app/assets/stylesheets/orders.scss */
+.order_form select {
+  width: 100%;
+  background: #e3e3e3;
+  border: none;
+  color: #333333;
+  padding: 10px 0;
+}
+
+/* line 45, app/assets/stylesheets/orders.scss */
+.order_form input[type="submit"] {
+  cursor: pointer;
+  border-radius: 20px;
+  background: #adbaf5;
+  color: #333333;
+}
+
+/* line 54, app/assets/stylesheets/orders.scss */
+.button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+/* line 64, app/assets/stylesheets/orders.scss */
+.button a {
+  color: #ffffff !important;
+}
+
+/* line 68, app/assets/stylesheets/orders.scss */
+.button:hover {
+  background: #5679fd;
+}
+/* === ADMIN LISTINGS ===*/
+/* line 6, app/assets/stylesheets/products.scss */
+.products-admin-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 10, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 15, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .products-header button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+/* line 25, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .products-header button a {
+  color: #ffffff !important;
+}
+
+/* line 29, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .products-header button:hover {
+  background: #5679fd;
+}
+
+/* line 35, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .products-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 50px;
+}
+
+/* line 44, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+}
+
+/* line 50, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item img {
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+/* line 56, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 61, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .title {
+  margin-top: 0;
+  color: #000000;
+  text-decoration: none;
+  font: 400 18px sans-serif;
+}
+
+/* line 68, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .price {
+  font: 500 16px sans-serif;
+}
+
+/* line 72, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .controls {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-left: auto;
+  text-align: left;
+}
+
+/* line 80, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .controls a {
+  font-size: 14px;
+  font-weight: 500;
+  color: #000000;
+}
+
+/* line 85, app/assets/stylesheets/products.scss */
+.products-admin-wrapper .product-item .controls a:hover {
+  text-decoration: underline;
+}
+
+/* === END ADMIN LISTINGS ===*/
+/* === PRODUCT SHOW ===*/
+/* line 96, app/assets/stylesheets/products.scss */
+.product-full-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+/* line 100, app/assets/stylesheets/products.scss */
+.product-full-wrapper .left {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 104, app/assets/stylesheets/products.scss */
+.product-full-wrapper .left img {
+  width: 450px;
+  height: 400px;
+}
+
+/* line 109, app/assets/stylesheets/products.scss */
+.product-full-wrapper .left button {
+  width: 100%;
+  background: #658665;
+  color: #fafafa;
+  font-size: 16px;
+  padding: 10px 15px;
+}
+
+/* line 116, app/assets/stylesheets/products.scss */
+.product-full-wrapper .left button:hover {
+  opacity: .9;
+}
+
+/* line 121, app/assets/stylesheets/products.scss */
+.product-full-wrapper .left .price {
+  font-size: 26px;
+  text-align: center;
+  color: #658665;
+}
+
+/* line 129, app/assets/stylesheets/products.scss */
+.product-full-wrapper .content .title {
+  font-size: 36px;
+  line-height: 1;
+}
+
+/* line 134, app/assets/stylesheets/products.scss */
+.product-full-wrapper .content .description {
+  font-size: 16px;
+}
+
+/* === END SHOW PRODUCT ===*/
+/* ===  PRODUCT FORM ===*/
+/* line 142, app/assets/stylesheets/products.scss */
+.product-form-wrapper {
+  width: 100%;
+  max-width: 500px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+/* line 151, app/assets/stylesheets/products.scss */
+.product-form-wrapper .field {
+  width: 100%;
+}
+
+/* line 155, app/assets/stylesheets/products.scss */
+.product-form-wrapper input {
+  width: 100%;
+  padding: 10px 5px;
+  border: 1px solid #e3e3e3;
+  text-overflow: ellipsis;
+}
+
+/* line 163, app/assets/stylesheets/products.scss */
+.product-form-wrapper .field_with_errors:last-of-type {
+  width: 100%;
+}
+
+/* line 165, app/assets/stylesheets/products.scss */
+.product-form-wrapper .field_with_errors:last-of-type input {
+  width: 99.5%;
+  padding: 10px 0;
+}
+
+/* line 170, app/assets/stylesheets/products.scss */
+.product-form-wrapper .field_with_errors:last-of-type textarea {
+  width: 99.1%;
+  padding: 10px 0;
+}
+
+/* line 177, app/assets/stylesheets/products.scss */
+.product-form-wrapper textarea {
+  width: 100%;
+  height: 150px;
+}
+
+/* line 182, app/assets/stylesheets/products.scss */
+.product-form-wrapper .actions input {
+  border-radius: 20px;
+  background: #879ef6;
+  color: #fafafa;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* line 190, app/assets/stylesheets/products.scss */
+.product-form-wrapper .actions input:hover {
+  opacity: .9;
+}
+
+/* === END PRODUCT FORM ===*/
+/* line 1, app/assets/stylesheets/scaffolds.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  margin: 33px;
+}
+
+/* line 6, app/assets/stylesheets/scaffolds.scss */
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+/* line 11, app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 16, app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+}
+
+/* line 19, app/assets/stylesheets/scaffolds.scss */
+a:visited {
+  color: #666;
+}
+
+/* line 22, app/assets/stylesheets/scaffolds.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 26, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 29, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 32, app/assets/stylesheets/scaffolds.scss */
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 36, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 39, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 44, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 51, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 60, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 64, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 5, app/assets/stylesheets/store.scss */
+.products-user-wrapper {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* line 9, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 14, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-header button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+/* line 24, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-header button a {
+  color: #ffffff !important;
+}
+
+/* line 28, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-header button:hover {
+  background: #5679fd;
+}
+
+/* line 34, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-items {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 68px;
+  margin-top: 50px;
+}
+
+/* line 42, app/assets/stylesheets/store.scss */
+.products-user-wrapper .products-items:after {
+  content: "";
+  flex: 1 1;
+}
+
+/* line 48, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item {
+  width: 100%;
+  max-width: 390px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* line 55, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item .button_to {
+  position: absolute;
+  left: 50%;
+  top: 175px;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+
+/* line 63, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item .button_to input {
+  padding: 15px 35px;
+  border-radius: 20px;
+  font-size: 14px;
+  background-color: #ffffff;
+  box-shadow: 0 0 9px 0 #333333;
+  border: none;
+  cursor: pointer;
+}
+
+/* line 75, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item:hover img {
+  opacity: .6;
+  cursor: auto;
+}
+
+/* line 80, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item:hover .button_to {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* line 85, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item img {
+  display: block;
+  width: 390px;
+  min-width: 390px;
+  height: 350px;
+  opacity: 1;
+  transition: opacity .2s linear;
+}
+
+/* line 94, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item .content {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 99, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item .title {
+  color: #000000;
+  text-decoration: none;
+  font: 400 18px sans-serif;
+}
+
+/* line 105, app/assets/stylesheets/store.scss */
+.products-user-wrapper .product-item .price {
+  margin-top: auto;
+  font: 500 16px sans-serif;
+}
+/* line 5, app/assets/stylesheets/users.scss */
+.button {
+  border-radius: 20px;
+  background: #849af1;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #ffffff !important;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: .2s linear;
+}
+
+/* line 16, app/assets/stylesheets/users.scss */
+.button a {
+  color: #ffffff !important;
+}
+
+/* line 20, app/assets/stylesheets/users.scss */
+.button:hover {
+  background: #5679fd;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+body {
+    background: #f8f9fa !important;
+    font-family: sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    background: transparent;
+    color: inherit;
+}
+
+button , .button{
+    padding: 5px 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.header {
+    background: #ffffff;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+    padding: 5px 0;
+}
+
+.header-wrap {
+    max-width: 1340px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__title {
+    font-size: 29px;
+    font-family: 'Pacifico', cursive;
+    color: #333333;
+}
+
+.header-info {
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.header-info input[type="submit"]{
+    background: indianred;
+    color: #fafafa;
+    border-radius: 20px;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: none;
+}
+
+.header-info select{
+    background: transparent;
+    border: none;
+    font-size: 14px;
+}
+
+.header-info .button-login {
+    background: #849af1 !important;
+}
+
+.body-wrapper {
+    width: 100%;
+    display: flex;
+    gap: 50px;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 20px 35px;
+    background: #ffffff;
+    box-shadow: 0 0.125rem 0.75rem rgba(0, 0, 0, 0.075) !important;
+}
+
+main {
+    width: 100%;
+}
+
+.carts {
+    width: 300px;
+}
+
+.carts table {
+    width: 100%;
+}
+
+.menu-nav {
+    font-size: 14px;
+    list-style: none;
+    margin-top: 30px;
+}
+
+.menu-nav h3 {
+    font-size: 23px;
+    margin-bottom: 5px;
+}
+
+.menu-nav li {
+    margin-top: 5px;
+}
+
+.menu-nav a:hover {
+    text-decoration: underline;
+}
+
+
+.main-image {
+    position: absolute;
+    opacity: .9;
+    z-index: -1;
+}
+
+.notice, #notice {
+    background: #ffb;
+    border-radius: 0.5em;
+    border: solid 0.177em #882;
+    color: #882;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 1em 1.414em;
+    text-align: center;
+}
+
+.form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.form input {
+    width: 100%;
+    padding: 10px 0px;
+    border: 1px solid #e3e3e3;
+    text-overflow: ellipsis;
+}
+
+.form .field_with_errors input {
+    width: 99.5%;
+    padding: 10px 0;
+}
+
+.form .field_with_errors:last-of-type {
+    width: 100%;
+}
+
+.form .field_with_errors textarea {
+    width: 99.1%;
+    padding: 10px 0;
+}
+
+.form textarea {
+    width: 100%;
+    height: 50px;
+    padding: 0;
+}
+
+.form select {
+    width: 100%;
+    background: #e3e3e3;
+    border: none;
+    color: #333333;
+    padding: 10px 0;
+}
+
+.form input[type="submit"] {
+    cursor: pointer;
+    border-radius: 20px;
+    background: #adbaf5;
+    color: #333333;
+}

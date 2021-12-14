@@ -1,0 +1,69 @@
+@charset "UTF-8";
+/* line 6, app/assets/stylesheets/carts.scss */
+.carts table {
+  border-collapse: collapse;
+}
+
+/* line 9, app/assets/stylesheets/carts.scss */
+.carts td {
+  padding: 0.5em;
+}
+
+/* line 12, app/assets/stylesheets/carts.scss */
+.carts td.quantity {
+  white-space: nowrap;
+}
+
+/* line 15, app/assets/stylesheets/carts.scss */
+.carts td.quantity::after {
+  content: " ×";
+}
+
+/* line 18, app/assets/stylesheets/carts.scss */
+.carts td.price {
+  font-weight: bold;
+  text-align: right;
+}
+
+/* line 23, app/assets/stylesheets/carts.scss */
+.carts tfoot th, .carts tfoot th.price {
+  font-weight: bold;
+  padding-top: .5em;
+}
+
+/* line 27, app/assets/stylesheets/carts.scss */
+.carts tfoot th {
+  text-align: right;
+}
+
+/* line 30, app/assets/stylesheets/carts.scss */
+.carts tfoot th.price {
+  border-top: solid thin;
+}
+
+/* line 34, app/assets/stylesheets/carts.scss */
+.carts .actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5px;
+}
+
+/* line 39, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"] {
+  background: indianred;
+  color: #fafafa;
+  border-radius: 20px;
+  padding: 10px 25px;
+  cursor: pointer;
+  border: none;
+}
+
+/* line 47, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"]:hover {
+  opacity: .9;
+}
+
+/* line 51, app/assets/stylesheets/carts.scss */
+.carts .actions input[type="submit"]:last-of-type {
+  background: #76bd76;
+}
